@@ -176,5 +176,3 @@ selecao.addEventListener("change", () => {
 });
 
 
-let botaoEsquerdo = document.getElementById("insta");
-let botaoDireito = document.getElementById("face");
