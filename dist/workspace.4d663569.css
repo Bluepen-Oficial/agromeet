@@ -1,0 +1,280 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background: radial-gradient(circle at 25%, #7a902e, #364627);
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: sans-serif;
+  display: flex;
+}
+
+main {
+  flex: 1 1 0;
+}
+
+header {
+  color: #a2bd2d;
+  background-color: #364627;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 40px;
+  padding: 1rem;
+  display: flex;
+}
+
+ul {
+  gap: 40px;
+  list-style: none;
+  display: flex;
+}
+
+.nav-link {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: #fcf96c;
+}
+
+.nav-link:after {
+  content: "";
+  background-color: #fff;
+  width: 0%;
+  height: 2px;
+  transition: all .25s ease-in-out;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+
+.nav-link:hover:after {
+  background-color: #fcf96c;
+  width: 100%;
+  position: absolute;
+}
+
+#logo {
+  cursor: pointer;
+  border-radius: 100%;
+  width: 100%;
+  max-width: 200px;
+}
+
+#agroFundo {
+  border-radius: 50%;
+  height: 200px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+#redes {
+  align-items: center;
+}
+
+#instaimg, #faceimg {
+  width: 50px;
+  height: 50px;
+}
+
+.imagensCarrossel {
+  cursor: pointer;
+  flex-shrink: 0;
+  width: 300px;
+  height: 200px;
+  transition: all .25s;
+}
+
+.imagensCarrossel:hover {
+  transform: scale(1.1);
+}
+
+#norteShow, #sealba, #itaipu, #agriShow {
+  cursor: not-allowed;
+}
+
+.btn {
+  cursor: pointer;
+  color: #124421;
+  background-color: #fff;
+  border: none;
+  border-radius: 100%;
+  padding: .8rem 1rem;
+  font-size: 18px;
+}
+
+#carrossel {
+  background-color: #2a2b26;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 40px;
+  padding: 2rem;
+  display: flex;
+  position: relative;
+}
+
+#segundaSessao, #primeiraSessao {
+  gap: 15px;
+  display: flex;
+}
+
+#segundaSessao {
+  display: none;
+}
+
+#eventos {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  display: flex;
+}
+
+.label {
+  color: #124421;
+  margin-right: 15px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#regioes {
+  color: #fff;
+  text-align: center;
+  background-color: #364627;
+  border-color: #364627;
+  min-width: 50px;
+  padding: 5px;
+  font-size: 1rem;
+}
+
+#detalhes {
+  color: #fff;
+  text-align: justify;
+  column-count: 2;
+  background: radial-gradient(circle at 90%, #7b5854, #2a2b26);
+  column-gap: 20px;
+  width: 100%;
+  height: 480px;
+  margin: 20px auto;
+  padding: 1rem;
+  font-size: 16px;
+  display: none;
+  box-shadow: 0 10px 20px #0009;
+}
+
+#detalhes.mostrar {
+  display: block;
+}
+
+.containerDetalhes {
+  align-items: flex-start;
+  gap: 30px;
+  display: flex;
+}
+
+.eventoInfo h3 {
+  color: #a2bd2d;
+  border-bottom: 2px solid #a2bd2d;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  font-size: 1.8rem;
+}
+
+.detalhesAdicionais strong {
+  color: #a2bd2d;
+}
+
+.detalhesAdicionais p {
+  color: #fff;
+}
+
+.botaoSite {
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  background-color: #364627;
+  border: none;
+  width: 200px;
+  height: 45px;
+  font-size: 24px;
+  transition: all .3s;
+  display: inline-block;
+}
+
+.botaoSite:hover {
+  background-color: #2e3b22;
+  border: 1px solid #a4a4a4a4;
+  transform: scale(1.1);
+}
+
+#imgDetAgroBrasilia, #imagemNorteShow, #imagemSealba, #imagemSealba, #imagemItaipu, #imagemAgriShow {
+  width: 350px;
+  height: 220px;
+}
+
+.localização {
+  background-color: #fff;
+  width: 350px;
+  height: 200px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.localização iframe {
+  border: 0;
+  width: 350px;
+  height: 200px;
+}
+
+footer {
+  color: #fff;
+  background-color: #364627;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+  display: flex;
+}
+
+#bandeiraBrasil {
+  border-radius: 15px;
+  width: 250px;
+  height: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+#sobre, #redes, #links {
+  flex-direction: column;
+  flex: 1;
+  gap: 1rem;
+  min-width: 230px;
+  display: flex;
+}
+
+#bandeira {
+  justify-content: center;
+  align-items: center;
+  margin-left: 95px;
+  display: flex;
+}
+
+#imgRedes {
+  flex-direction: row;
+}
+/*# sourceMappingURL=workspace.4d663569.css.map */

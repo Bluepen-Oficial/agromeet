@@ -1,0 +1,396 @@
+/*  +-------------------------------------------+
+    |              Estilos Globais              |
+    +-------------------------------------------+*/
+
+/*cores
+cor principal: rgb(122, 144, 46)
+cor verde escura: rgb(54, 70, 39)
+cor marrom fundo carrossell 
+cor fontes rgb(162, 189, 45);*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: sans-serif;
+  background: radial-gradient(
+    circle at 25%,
+    rgb(122, 144, 46),
+    rgb(54, 70, 39)
+  );
+  background-repeat: repeat;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1 1 0;
+}
+
+header {
+  background-color: rgb(54, 70, 39);
+  color: rgb(162, 189, 45);
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 40px;
+  align-items: center;
+  padding: 1rem;
+}
+
+ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+.nav-link {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-decoration: none;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: #fcf96c;
+}
+
+.nav-link::after {
+  content: "";
+  transition: 0.25s ease-in-out;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  bottom: -4px;
+  left: 0;
+}
+
+.nav-link:hover::after {
+  position: absolute;
+  width: 100%;
+  background-color: #fcf96c;
+}
+
+/*  +-------------------------------------------+
+    |              Estilo Imagens               |
+    +-------------------------------------------+*/
+
+#logo {
+  width: 100%;
+  max-width: 200px;
+  cursor: pointer;
+  border-radius: 100%;
+}
+
+#agroFundo {
+  margin-top: 10px;
+  height: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+}
+
+#redes {
+  align-items: center;
+}
+
+#instaimg {
+  height: 50px;
+  width: 50px;
+}
+
+#faceimg {
+  height: 50px;
+  width: 50px;
+}
+
+/*  +-------------------------------------------+
+    |             Estilos Carrossel             |
+    +-------------------------------------------+*/
+
+.imagensCarrossel {
+  width: 300px;
+  height: 200px;
+  cursor: pointer;
+  transition: 0.25s;
+  flex-shrink: 0;
+}
+
+.imagensCarrossel:hover {
+  transform: scale(1.1);
+}
+/* Ue pra que isso se tem classe?
+#agroBrasilia {
+  width: 350px;
+  height: 200px;
+}
+
+#norteShow {
+  width: 350px;
+  height: 200px;
+}
+
+#sealba {
+  width: 350px;
+  height: 200px;
+}
+
+#itaipu {
+  width: 350px;
+  height: 200px;
+}
+
+#agriShow {
+  width: 350px;
+  height: 200px;
+} */
+
+#norteShow,
+#sealba,
+#itaipu,
+#agriShow {
+  cursor: not-allowed;
+}
+
+.btn {
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
+  border: none;
+  background-color: #fff;
+  color: #124421;
+  /* margin-bottom: 20px; */
+  font-size: 18px;
+  /* position: absolute;*/
+}
+
+#carrossel {
+  background-color: #2a2b26;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2rem;
+  margin-bottom: 40px;
+  position: relative;
+  gap: 1rem;
+}
+
+#segundaSessao,
+#primeiraSessao {
+  display: none;
+  display: flex;
+  gap: 15px;
+}
+
+#segundaSessao {
+  display: none;
+}
+
+/*  +-------------------------------------------+
+    |             Select Região                 |
+    +-------------------------------------------+*/
+#eventos {
+  /*background-color: aqua; só pra poder ver a parte melhor, depois tirar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 20px auto;
+}
+
+.label {
+  color: #124421;
+  font-weight: bold;
+  font-size: 28px;
+  margin-right: 15px;
+}
+
+#regioes {
+  background-color: rgb(54, 70, 39);
+  border-color: rgb(54, 70, 39);
+  color: #ffffff;
+  text-align: center;
+  font-size: 1rem;
+  min-width: 50px;
+  padding: 5px;
+}
+
+/*  +-------------------------------------------+
+    |             Estilos Detalhes              |
+    +-------------------------------------------+*/
+
+#detalhes {
+  padding: 1rem;
+  width: 100%;
+  height: 480px;
+  color: #ffffff;
+  font-size: 16px;
+  text-align: justify;
+  column-gap: 20px;
+  column-count: 2;
+  margin: 20px auto;
+  background: radial-gradient(circle at 90%, rgb(123, 88, 84), rgb(42, 43, 38));
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+  display: none; /* Para a div ficar inicialmente escondida */
+}
+
+#detalhes.mostrar {
+  display: block; /*Mostra quando tiver a classe 'mostrar' */
+}
+
+.containerDetalhes {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+/* .imagemEvento {
+  /* essa caralha não tá funcionando não sei se depende do js ainda
+  flex: 0 0 40%;
+} */
+
+.eventoInfo h3 {
+  color: rgb(162, 189, 45);
+  margin-bottom: 5px;
+  font-size: 1.8rem;
+  border-bottom: 2px solid rgb(162, 189, 45);
+  padding-bottom: 5px;
+}
+
+.detalhesAdicionais strong {
+  color: rgb(162, 189, 45);
+}
+
+.detalhesAdicionais p {
+  color: #ffffff;
+}
+
+.botaoSite {
+  display: inline-block;
+  width: 200px;
+  height: 45px;
+  background-color: rgb(54, 70, 39);
+  border: none;
+  color: #ffffff;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.botaoSite:hover {
+  transform: scale(1.1);
+  background-color: rgb(46, 59, 34);
+  border: 1px solid rgba(164, 164, 164, 0.644);
+}
+
+/* .imagemEvento { ESSA CARALHA NÃO ESTÁ FUNCIONANDO
+  width: 350px;
+  height: 220px;
+} */
+
+#imgDetAgroBrasilia {
+  width: 350px;
+  height: 220px;
+}
+
+#imagemNorteShow {
+  width: 350px;
+  height: 220px;
+}
+
+#imagemSealba {
+  width: 350px;
+  height: 220px;
+}
+
+#imagemSealba {
+  width: 350px;
+  height: 220px;
+}
+
+#imagemItaipu {
+  width: 350px;
+  height: 220px;
+}
+
+#imagemAgriShow {
+  width: 350px;
+  height: 220px;
+}
+
+/*  +-------------------------------------------+
+    |                Estilo Mapa                |
+    +-------------------------------------------+*/
+
+.localização {
+  position: relative;
+  background-color: white;
+  width: 350px;
+  height: 200px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.localização iframe {
+  width: 350px;
+  height: 200px;
+  border: 0;
+}
+
+/*  +-------------------------------------------+
+    |              Estilo Rodapé                |
+    +-------------------------------------------+*/
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(54, 70, 39);
+  color: #fff;
+  padding: 1rem;
+  /* margin-top: auto; */
+}
+
+#bandeiraBrasil {
+  /* margin-top: 55%; */
+  height: 10vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 15px;
+  width: 250px;
+  height: 150px;
+}
+
+#sobre,
+#redes,
+#links {
+  display: flex;
+  flex-direction: column;
+  min-width: 230px;
+  flex: 1;
+  gap: 1rem;
+}
+
+#bandeira {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 95px;
+}
+
+#imgRedes {
+  flex-direction: row;
+}
